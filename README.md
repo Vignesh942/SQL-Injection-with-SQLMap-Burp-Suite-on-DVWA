@@ -2,7 +2,7 @@
 
 
 
-## 📌 Overview
+##  Overview
 This project demonstrates how to perform **SQL Injection** using **SQLMap** and **Burp Suite** on **Damn Vulnerable Web Application (DVWA)** to enumerate and exploit databases.
 
 ---
@@ -13,16 +13,16 @@ This project demonstrates how to perform **SQL Injection** using **SQLMap** and 
 - **DVWA (Damn Vulnerable Web App)** running on **Metasploitable 2**
 
 ---
-## 🔥 Steps to Exploit SQL Injection
+## Steps to Exploit SQL Injection
 
-### 1️⃣ Capture the Request using Burp Suite
+### Capture the Request using Burp Suite
 1. Open **Burp Suite** and enable **Intercept** in the **Proxy** tab.
 2. In your browser, navigate to `http://<DVWA-IP>/dvwa/vulnerabilities/sqli/`.
 3. Enter any value in the input field and submit the form.
 4. Burp Suite will capture the **HTTP Request**.
 5. Right-click the request → **Save item** as `request.txt`.
 
-### 2️⃣ Use SQLMap to Test SQL Injection
+###  Use SQLMap to Test SQL Injection
 Run the following command in your terminal:
 ```sh
 sqlmap -r request.txt --dbs --batch
@@ -31,7 +31,7 @@ sqlmap -r request.txt --dbs --batch
 - `--dbs` → Lists available databases.
 - `--batch` → Auto confirms prompts.
 
-### 3️⃣ Enumerate Tables & Columns
+###  Enumerate Tables & Columns
 Once databases are listed, pick `dvwa` and enumerate tables:
 ```sh
 sqlmap -r request.txt -D dvwa --tables
@@ -41,24 +41,24 @@ Then, retrieve columns of the `users` table:
 sqlmap -r request.txt -D dvwa -T users --columns
 ```
 
-### 4️⃣ Dump User Credentials
+###  Dump User Credentials
 ```sh
 sqlmap -r request.txt -D dvwa -T users --dump
 ```
 This extracts stored usernames and passwords from DVWA.
 
 ---
-## 🎯 Expected Output
+## Expected Output
 - Lists available **databases**.
 - Extracts **tables and columns** from `dvwa`.
 - Dumps **user credentials** stored in the database.
 
 ---
-## ⚠️ Legal Disclaimer
+## Legal Disclaimer
 This project is for **educational purposes only**. Do not test SQL injection on unauthorized systems. Always obtain permission before conducting security tests.
 
 ---
-## 📷 Screenshots
+##  Screenshots
 
 
 
