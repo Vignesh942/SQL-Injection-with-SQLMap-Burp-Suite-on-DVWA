@@ -5,7 +5,7 @@
 ##  Overview
 This project demonstrates how to perform **SQL Injection** using **SQLMap** and **Burp Suite** on **Damn Vulnerable Web Application (DVWA)** to enumerate and exploit databases.
 
----
+--- 
 ##  Requirements
 - **Kali Linux** (or any OS with Burp Suite & SQLMap installed)
 - **Burp Suite Community Edition**
