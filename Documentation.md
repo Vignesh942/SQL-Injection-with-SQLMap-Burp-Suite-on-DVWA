@@ -4,7 +4,7 @@ Author: Vignesh G
 Date: February 2025
 Tools Used: Burp Suite, SQLMap, DVWA (Metasploitable 2)
 
-## Objective
+## Objective   
 To identify and exploit SQL Injection vulnerabilities in the Damn Vulnerable Web Application (DVWA) using SQLMap and Burp Suite, demonstrating how attackers can extract sensitive database information.
 
  ## Environment Setup
